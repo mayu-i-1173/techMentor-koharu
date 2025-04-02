@@ -1,0 +1,94 @@
+@use "setting" as s;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  margin-bottom: 80px;
+  grid-template-areas:
+    "A B C D"
+    "A E F G";
+  @include s.mq(tab) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "A A"
+      "B C"
+      "D E"
+      "F G";
+    gap: 28px 8px;
+  }
+  .grid-item {
+    color: s.$colorWhite;
+    &:nth-child(1) {
+      grid-area: A;
+      .grid-img {
+        height: calc(100% - 49px);
+        object-fit: cover;
+        object-position: right;
+        @include s.mq(tab) {
+          height: auto;
+        }
+      }
+    }
+    &:nth-child(2) {
+      grid-area: B;
+    }
+    &:nth-child(3) {
+      grid-area: C;
+    }
+    &:nth-child(4) {
+      grid-area: D;
+    }
+    &:nth-child(5) {
+      grid-area: E;
+    }
+    &:nth-child(6) {
+      grid-area: F;
+    }
+    &:nth-child(7) {
+      grid-area: G;
+    }
+  }
+}
+
+.grid-img {
+  margin-bottom: 5px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.moreview-btn {
+  color: s.$colorWhite;
+  border: 1px solid s.$colorWhite;
+  width: 240px;
+  height: 50px;
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.side-text {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  position: absolute;
+  top: 45%;
+  left: -100px;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  @include s.mq(tab) {
+    display: none;
+  }
+  &::before {
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    top: 0;
+    bottom: 0;
+    margin-right: 24px;
+    left: 0;
+  }
+}

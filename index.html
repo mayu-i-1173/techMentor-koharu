@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- ウェブページの文字エンコーディングを指定するために使用されます。 -->
+    <meta charset="UTF-8" />
+    <!-- ウェブページのビューポート（表示領域）の設定を指定します。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ウェブページのタイトルに使用されます。 -->
+    <title>うつわ屋こはる</title>
+    <!-- ウェブページの簡潔な説明や概要を提供するために使用されます。 -->
+    <meta
+      name="description"
+      content="うつわ屋こはるは陶器専門のECサイトです。陶器の製造・販売を行っています。"
+    />
+    <!-- モバイルブラウザが電話番号の検出やリンク化を行わないように設定しています。 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- ファビコンを設定しています。 -->
+    <link rel="shortcut icon" href="image/favicon.ico" />
+    <!-- font-awesomeを使用しています。 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- reset.cssは、destyleを使用しています。 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <!-- スタイルシート（css）を呼び出しています -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="body">
+    <header class="header u-wrapper">
+      <h1>
+        <a href="index.html"
+          ><img
+            class="header__logo"
+            src="image/logo-white.png"
+            alt="うつわ屋こはる"
+        /></a>
+      </h1>
+      <div>
+        <nav class="header__menu">
+          <a href="index.html"
+            ><img
+              class="header__menuLogo"
+              src="image/logo.png"
+              alt="うつわ屋こはる"
+          /></a>
+          <ul>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="index.html">ホーム</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="products.html">商品一覧</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="company.html">会社概要</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="about.html">私たちについて</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__toggleBtn">
+          <span class="header__hamburgerLine"></span>
+          <span class="header__hamburgerLine"></span>
+          <span class="header__hamburgerLine"></span>
+        </div>
+        <div class="header__mask"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="u-wrapper">
+        <p class="side-text">UTSUWAYA KOHARU</p>
+        <div class="grid">
+          <div class="grid-item">
+            <a href="item1.html">
+              <img src="image/item1.jpg" alt="" class="grid-img" />
+              <p class="grid-text">益子焼オリジナルセット</p>
+              <p class="grid-text">¥9,800</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item2.html">
+              <img src="image/item2.jpg" alt="" class="grid-img" />
+              <p class="grid-text">湯呑み茶碗</p>
+              <p class="grid-text">¥4,400</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item3.html">
+              <img src="image/item3.jpg" alt="" class="grid-img" />
+              <p class="grid-text">抹茶茶碗</p>
+              <p class="grid-text">¥3,200</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item4.html">
+              <img src="image/item4.jpg" alt="" class="grid-img" />
+              <p class="grid-text">レトロのボウル</p>
+              <p class="grid-text">¥2,500</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item5.html">
+              <img src="image/item5.jpg" alt="" class="grid-img" />
+              <p class="grid-text">益子焼マグカップ</p>
+              <p class="grid-text">¥3,500</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item6.html">
+              <img src="image/item6.jpg" alt="" class="grid-img" />
+              <p class="grid-text">オリジナルカップ</p>
+              <p class="grid-text">¥5,200</p>
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="item7.html">
+              <img src="image/item7.jpg" alt="" class="grid-img" />
+              <p class="grid-text">ビンテージカップ</p>
+              <p class="grid-text">¥3,500</p>
+            </a>
+          </div>
+        </div>
+        <div class="btn-wrapper">
+          <a href="products.html" class="moreview-btn">もっとみる</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="u-wrapper">
+        <nav class="footer-nav">
+          <div class="footer-left">
+            <a href="index.html">
+              <img src="image/logo.png" alt="" class="footer-logo" />
+            </a>
+            <ul class="footer-ul">
+              <li class="footer-li"><a href="index.html">ホーム</a></li>
+              <li class="footer-li"><a href="products.html">商品一覧</a></li>
+              <li class="footer-li"><a href="company.html">会社概要</a></li>
+              <li class="footer-li"><a href="about.html">私たちについて</a></li>
+            </ul>
+          </div>
+          <small class="footer-copy">©︎うつわ屋こはる All Right Reserved</small>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

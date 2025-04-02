@@ -1,0 +1,63 @@
+@use "setting" as s;
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  margin: 32px auto 120px;
+  // @include s.mq(tab) {
+  //   width: 85%;
+  //   margin: 0 auto;
+  // }
+}
+
+.item-img {
+  width: 49%;
+  height: auto;
+}
+
+.item-right {
+  color: s.$colorWhite;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.item-input-wrap {
+  p {
+    font-size: 14px;
+  }
+  input {
+    display: block;
+    background-color: s.$colorWhite;
+    color: s.$colorBlack;
+    height: 40px;
+    margin: 10px 0;
+    padding: 10px 5px;
+  }
+}
+
+.cart-btn {
+  background-color: #ba0808;
+  color: s.$colorWhite;
+  height: auto;
+  text-align: center;
+  padding: 10px 20px;
+  letter-spacing: 0.1em;
+}
+
+.item-title {
+  font-size: 35px;
+}
+
+.item-price {
+  font-size: 22px;
+}
+
+.item-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 2;
+}

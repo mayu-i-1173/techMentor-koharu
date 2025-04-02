@@ -1,0 +1,246 @@
+/*-------------------------------------------
+共通クラス
+-------------------------------------------*/
+@use "setting" as s;
+
+body {
+  font-family: "Hiragino Mincho Pro", "Hiragino Mincho ProN", "Yu Mincho",
+    YuMincho, HGS明朝E, メイリオ, Meiryo, serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.body {
+  background: s.$colorBlack;
+}
+
+.main {
+  position: relative;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/*-------------------------------------------
+共通パーツの指定
+-------------------------------------------*/
+.u-wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include s.mq(tab) {
+    padding: 0px 10px;
+  }
+}
+
+/*-------------------------------------------
+ヘッダー、ハンバーガーメニュー
+-------------------------------------------*/
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header__logo {
+  width: 160px;
+  height: auto;
+}
+
+.header__menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  width: 300px;
+  color: s.$colorWhite;
+  padding: 60px 25px;
+  background-color: s.$colorWhite;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+
+.header__menuLogo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.header__menuLink {
+  color: s.$colorBlack;
+}
+
+.header__menuList {
+  margin-bottom: 20px;
+}
+
+.header__toggleBtn {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.header__hamburgerLine {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: s.$colorWhite;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.header__hamburgerLine:nth-child(1) {
+  top: 2px;
+}
+
+.header__hamburgerLine:nth-child(2) {
+  top: 12px;
+}
+
+.header__hamburgerLine:nth-child(3) {
+  top: 22px;
+}
+
+.open {
+  .header__menu {
+    left: 0;
+    opacity: 1;
+  }
+
+  .header__hamburgerLine {
+    background-color: s.$colorWhite;
+  }
+
+  .header__hamburgerLine:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  .header__hamburgerLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__hamburgerLine:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+.header__mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+.open {
+  .header__mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: s.$colorBlack;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer {
+  height: 160px;
+  width: 100%;
+  background-color: s.$colorWhite;
+  display: flex;
+  align-items: center;
+  @include s.mq(tab) {
+    height: auto;
+    padding: 48px 0;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include s.mq(tab) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer-logo {
+  width: 160px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.footer-ul {
+  display: flex;
+  column-gap: 28px;
+  @include s.mq(tab) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer-li {
+  margin-bottom: 24px;
+}
+
+.footer-copy {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/*-------------------------------------------
+各ページのタイトル
+-------------------------------------------*/
+.page-title {
+  font-size: 32px;
+  color: s.$colorWhite;
+  margin: 20px 0 30px 0;
+  position: relative;
+  padding-left: 50px;
+  @include s.mq(tab) {
+    font-size: 25px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: s.$colorWhite;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+  }
+}
