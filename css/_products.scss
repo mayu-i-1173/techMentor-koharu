@@ -1,0 +1,42 @@
+@use "setting" as s;
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  margin-bottom: 80px;
+  grid-template-areas:
+    "A B C D"
+    "E F G H"
+    "I J K L"
+    "M N O P";
+  @include s.mq(tab) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "A B"
+      "C D"
+      "E F"
+      "G H"
+      "I J"
+      "K L"
+      "M N"
+      "O P";
+    gap: 28px 8px;
+  }
+  .grid-item {
+    color: s.$colorWhite;
+  }
+}
+
+.products-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-bottom: 80px;
+  @include s.mq(tab) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-item {
+    color: s.$colorWhite;
+  }
+}

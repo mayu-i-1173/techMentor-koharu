@@ -1,0 +1,61 @@
+@use "setting" as s;
+
+.company {
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+  gap: 48px;
+  @include s.mq(tab) {
+    flex-direction: column;
+  }
+}
+
+.company-item {
+  flex: 1;
+}
+
+.company-map {
+  width: 100%;
+  position: relative;
+  padding-top: 50%;
+  @include s.mq(tab) {
+    padding-top: 75%;
+  }
+}
+
+.company-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.company-dl {
+  display: flex;
+  flex-wrap: wrap;
+  color: s.$colorWhite;
+  @include s.mq(tab) {
+    font-size: 14px;
+  }
+}
+
+.company-dt {
+  width: 30%;
+  border-bottom: solid 1px s.$borderColor;
+  padding: 20px 1px;
+}
+
+.company-dt:last-of-type {
+  border-bottom: none;
+}
+
+.company-dd {
+  width: 70%;
+  border-bottom: solid 1px s.$borderColor;
+  padding: 20px 10px;
+}
+
+.company-dd:last-of-type {
+  border-bottom: none;
+}

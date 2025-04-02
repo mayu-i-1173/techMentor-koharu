@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- ウェブページの文字エンコーディングを指定するために使用されます。 -->
+    <meta charset="UTF-8" />
+    <!-- ウェブページのビューポート（表示領域）の設定を指定します。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ウェブページのタイトルに使用されます。 -->
+    <title>item | うつわ屋こはる</title>
+    <!-- ウェブページの簡潔な説明や概要を提供するために使用されます。 -->
+    <meta
+      name="description"
+      content="うつわ屋こはるは陶器専門のECサイトです。陶器の製造・販売を行っています。"
+    />
+    <!-- モバイルブラウザが電話番号の検出やリンク化を行わないように設定しています。 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- ファビコンを設定しています。 -->
+    <link rel="shortcut icon" href="image/favicon.ico" />
+    <!-- font-awesomeを使用しています。 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- reset.cssは、destyleを使用しています。 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <!-- スタイルシート（css）を呼び出しています -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="body">
+    <header class="header u-wrapper">
+      <h1>
+        <a href="index.html"
+          ><img
+            class="header__logo"
+            src="image/logo-white.png"
+            alt="うつわ屋こはる"
+        /></a>
+      </h1>
+      <div>
+        <nav class="header__menu">
+          <a href="index.html"
+            ><img
+              class="header__menuLogo"
+              src="image/logo.png"
+              alt="うつわ屋こはる"
+          /></a>
+          <ul>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="index.html">ホーム</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="products.html">商品一覧</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="company.html">会社概要</a>
+            </li>
+            <li class="header__menuList">
+              <a class="header__menuLink" href="about.html">私たちについて</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__toggleBtn">
+          <span class="header__hamburgerLine"></span>
+          <span class="header__hamburgerLine"></span>
+          <span class="header__hamburgerLine"></span>
+        </div>
+        <div class="header__mask"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="u-wrapper">
+        <div class="item">
+          <img src="image/item2.jpg" alt="" class="item-img" />
+          <div class="item-right">
+            <h3 class="item-title">湯呑み茶碗</h3>
+            <h4 class="item-price">価格：4,400円 (税込み)</h4>
+            <div class="item-input-wrap">
+              <p>数量</p>
+              <input type="number" />
+              <button class="cart-btn">
+                お買い物かごに入れる
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <div class="item-text-wrap">
+              <p class="item-text">
+                このマグカップは、地元で採れる質の高い粘土を使用し、一つ一つ手作業で丁寧に作られています。シンプルながらも洗練されたフォルムは、持ちやすさと使いやすさを追求しました。
+              </p>
+              <p class="item-text">
+                手に馴染む持ち手部分は、長時間の使用でも疲れにくく、毎日のコーヒータイムやティータイムにおすすめです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="u-wrapper">
+        <nav class="footer-nav">
+          <div class="footer-left">
+            <a href="index.html">
+              <img src="image/logo.png" alt="" class="footer-logo" />
+            </a>
+            <ul class="footer-ul">
+              <li class="footer-li"><a href="index.html">ホーム</a></li>
+              <li class="footer-li"><a href="products.html">商品一覧</a></li>
+              <li class="footer-li"><a href="company.html">会社概要</a></li>
+              <li class="footer-li"><a href="about.html">私たちについて</a></li>
+            </ul>
+          </div>
+          <small class="footer-copy">©︎うつわ屋こはる All Right Reserved</small>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/menu.js"></script>
+  </body>
+</html>
